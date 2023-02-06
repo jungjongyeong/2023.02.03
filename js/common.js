@@ -1,30 +1,34 @@
-// swiper
+var ww = $(window).width()
+if (ww>1024) {
+    $('html').addClass('pc')
+} else {
+    $('html').addClass('mobile')
+}
 
-var swiper = new Swiper('.swiper-container', {
-    loop: false,
-    spaceBetween: 50,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    autoplay: {
-        delay: 6000,
-        disableOnInteraction: false
-    },
-    loop: true
-});
-
-$('.btn_prev').on('click', function () {
-    $(this).hide();
-    $(this).prev().show();
+// pc화면용 네비게이션 액션
+$('#header #nav .depth1 > li').on('mouseover mouseout', function(){
+    if ( $('html').hasClass('pc') ) {
+        $(this).find('.depth2').stop().slideToggle()
+    }
 })
 
-$('.btn_next').on('click', function () {
-    $(this).hide();
-    $(this).next().show();
-})
+// 위의 코드 결과와 같음
+// $('#header #nav .depth1 > li').hover(
+//     function(){
+//         if ( $('html').hasClass('pc')) {
+//             $(this).find('.depth2').stop().slideDown()
+//         }
+//     },
+//     function(){
+//         if ( $('html').hasClass('pc')) {
+//             $(this).find('.depth2').stop().slideUp()
+//         }
+//     }
+// )
 
-// open 
+
+
+
 
 $('#header .open').on('click', function () {
     $(this).toggleClass('active')
@@ -44,4 +48,25 @@ $('#header #nav').on('mouseout', function () {
 })
 $('#header .open').on('click', function () {
     $(this).toggleClass('on')
+})
+
+
+$(window).scroll(function(){
+    let sct = $(this).scrollTop()
+    if (sct>100) {
+        $('#gotop').fadeIn(300)
+    } else {
+        $('#gotop').fadeOut(300)
+    }
+})
+
+$('#gotop a').click(function(){
+    $('html').animate({
+        scrollTop:'0'
+    }, 500)
+    return false
+})
+
+$('.fam').on('click', function(){
+    $(this).find('ul').slideToggle()
 })

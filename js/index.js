@@ -14,7 +14,6 @@ $('.slide-group').slick({
 $('.slide-group2').slick({
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode:true,
     prevArrow: '<button type="button" class="slick-prev"><i class="fa-solid fa-angle-left"></i></button>',
     nextArrow: '<button type="button" class="slick-next"><i class="fa-solid fa-angle-right"></i></button>',
     speed:1000,
@@ -24,7 +23,6 @@ $('.slide-group2').slick({
         breakpoint: 1025,
         settings: {
             slidesToShow: 1,
-            arrows:false,
         }
 }]
 })

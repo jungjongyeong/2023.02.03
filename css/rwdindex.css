@@ -2,6 +2,10 @@
  .article4 .slick-arrow { display:none !important; position:absolute; top:50%; transform: translateY(-50%); border:none; width:40px; font-size: 50px; color:#000; } 
  }
 
+ @keyframes btnAni { 
+    0% { width:0 } 
+    100% { width:64px } 
+    }
 @media screen and (max-width:1084px) { /* article1 */
  #section .article1 .slide { height:400px; background-size:cover; background-position:center; position:relative; } 
 #section .article1 .slide_text { position: absolute; margin: 0 auto; top: 42%; max-width: 100%; text-align: center; margin: 0; font-size: 20px; z-index: 99; color: #fff; } 

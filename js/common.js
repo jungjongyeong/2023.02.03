@@ -1,16 +1,16 @@
 var ww = $(window).width()
-if (ww>1024) {
+if (ww > 1024) {
     $('html').addClass('pc')
 } else {
     $('html').addClass('mobile')
 }
 
 // pc화면용 네비게이션 액션
-$('#header #nav .depth1 > li').on('mouseover mouseout', function(){
-    if ( $('html').hasClass('pc') ) {
-        $(this).find('.depth2').stop().slideToggle()
-    }
-})
+// $('#header #nav .depth1 > li').on('mouseover mouseout', function () {
+//     if ($('html').hasClass('pc')) {
+//         $(this).find('.depth2').stop().slideToggle()
+//     }
+// })
 
 // 위의 코드 결과와 같음
 // $('#header #nav .depth1 > li').hover(
@@ -38,12 +38,14 @@ $('#header .open').on('click', function () {
     $('.navUl').toggleClass('active')
 })
 
-$('#header #nav').on('mouseover', function () {
-    $(this).find('.depth2').stop().slideDown();
+$('#header').on('mouseover', function () {
+    $('.depth2').addClass('active')
+    $('#nav .navUl .menu').addClass('active')
 
 })
-$('#header #nav').on('mouseout', function () {
-    $(this).find('.depth2').stop().slideUp();
+$('#header').on('mouseout', function () {
+    $('.depth2').removeClass('active')
+    $('#nav .navUl .menu').removeClass('active')
 
 })
 $('#header .open').on('click', function () {
@@ -51,22 +53,19 @@ $('#header .open').on('click', function () {
 })
 
 
-$(window).scroll(function(){
+$(window).scroll(function () {
     let sct = $(this).scrollTop()
-    if (sct>100) {
-        $('#gotop').fadeIn(300)
+    if (sct > 100) {
+        $('#header .headerFixed').addClass('scroll')
+        $('#nav .navUl').addClass('scroll')
+        $('.depth1').addClass('scroll')
+        $('#header h1').addClass('scroll')
+        $('.cd-nav-trigger').addClass('scroll')
     } else {
-        $('#gotop').fadeOut(300)
+        $('#header .headerFixed').removeClass('scroll')
+        $('#nav .navUl').removeClass('scroll')
+        $('.depth1').removeClass('scroll')
+        $('#header h1').removeClass('scroll')
+        $('.cd-nav-trigger').removeClass('scroll')
     }
-})
-
-$('#gotop a').click(function(){
-    $('html').animate({
-        scrollTop:'0'
-    }, 500)
-    return false
-})
-
-$('.fam').on('click', function(){
-    $(this).find('ul').slideToggle()
 })

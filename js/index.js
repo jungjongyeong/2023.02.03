@@ -27,6 +27,7 @@ $('.slide-group2').slick({
 }]
 })
 
+
 // 재생, 멈춤버튼
 $('.article1 .plpa i').on('click', function(){ 
     if($(this).hasClass('fa-pause')){
@@ -40,6 +41,4 @@ $('.article1 .plpa i').on('click', function(){
     }
 })
 
-
-// open 
 

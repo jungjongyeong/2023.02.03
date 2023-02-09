@@ -38,12 +38,12 @@ $('#header .open').on('click', function () {
     $('.navUl').toggleClass('active')
 })
 
-$('#header').on('mouseover', function () {
+$('#header .navUl').on('mouseover', function () {
     $('.depth2').addClass('active')
     $('#nav .navUl .menu').addClass('active')
 
 })
-$('#header').on('mouseout', function () {
+$('#header .navUl').on('mouseout', function () {
     $('.depth2').removeClass('active')
     $('#nav .navUl .menu').removeClass('active')
 

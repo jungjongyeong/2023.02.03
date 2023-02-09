@@ -45,9 +45,8 @@
 .article3 { position: relative; height:657px; margin: 130px 0 0; overflow: hidden; z-index: 10; max-width: 100%; background-color:#fff; } 
 .article3 .tit { position:absolute; left:0; width: 1600px; height: 100%; margin: 0 auto; } 
 .article3 .tit .row { padding: 0 0 40px 320px; } 
-.article3 .tit .row > p { padding: 22px 0 0 35px; color:#999; font-size: 16px; } 
 .article3 .tit h3 { float: left; font-size: 35px; font-weight: 500; letter-spacing: 20px; } 
-.article3 .tit p { float: left; padding: 22px 0 0 35px; color:#fff; font-size: 16px; } 
+.article3 .tit p {  padding: 22px 0 0 35px; color:#999; font-size: 16px; } 
 .article3 .tit .titimg { position:relative; width:100%;; height:657px; padding:63px 0; overflow:hidden; background: url(../img/img3.jpg) no-repeat center; background-size: cover; background-position: center; } 
 .article3 .tit .titimgright { float: right; height:380px; } 
 .article3 .tit .titimgright img { width: 650px; margin: 0px 20px 0 0; } 

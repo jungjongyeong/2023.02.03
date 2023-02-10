@@ -42,3 +42,16 @@ $('.article1 .plpa i').on('click', function(){
 })
 
 
+let article2Near = $('.article2').offset().top - $(window).height()/1.3
+
+$(window).on('scroll', function(){
+    let sct = $(this).scrollTop()
+    
+    if (sct>=article2Near) {
+        $('.article2').addClass('on')
+    } else {
+        $('.article2').removeClass('on')
+    }
+
+
+})
